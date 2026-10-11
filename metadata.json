@@ -1,0 +1,10 @@
+{
+  "name": "Remix Shree Sai Developers",
+  "description": "Discover Shree Sai Developers for residential property enquiries, buying, selling and renting opportunities. Explore our properties and connect with us for more information.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

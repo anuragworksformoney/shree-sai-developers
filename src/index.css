@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+html,
+body {
+  background-color: #0B1325 !important;
+  color: #E2E8F0 !important;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #0B1325;
+}
+
+@layer utilities {
+  .font-cinzel {
+    font-family: 'Cinzel', Georgia, serif !important;
+  }
+  .font-montserrat {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif !important;
+  }
+  .font-playfair {
+    font-family: 'Playfair Display', Georgia, Cambria, Times New Roman, serif !important;
+  }
+  .font-inter {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif !important;
+  }
+
+  .card-hw {
+    background-color: #1C2541;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  .card-hw-interactive {
+    will-change: transform, box-shadow;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .card-hw-interactive:hover {
+      background-color: #1F2A4A;
+      border-color: rgba(212, 175, 55, 0.42);
+      transform: translateY(-4px);
+      box-shadow: 0 14px 34px -10px rgba(0, 0, 0, 0.65), 0 0 22px -2px rgba(212, 175, 55, 0.14);
+    }
+  }
+
+  .btn-hw-primary {
+    background: #D4AF37;
+    border: 1px solid #D4AF37;
+    color: #0B1325;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 12px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-hw-primary:hover {
+    background: #E5C158;
+    border-color: #E5C158;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+  }
+
+  .btn-hw-outline {
+    background: transparent;
+    border: 1.5px solid #D4AF37;
+    color: #D4AF37;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 12px 28px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-hw-outline:hover {
+    background: #D4AF37;
+    color: #0B1325;
+  }
+}
+
+/* Animations */
+@keyframes eliteReveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-elite-title {
+  animation: eliteReveal 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-elite-subtext {
+  animation: eliteReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+.animate-elite-buttons {
+  animation: eliteReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
